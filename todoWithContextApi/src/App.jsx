@@ -22,13 +22,13 @@ function App() {
   }
   useEffect(()=>{
     const todos= JSON.parse(localStorage.getItem("todos"));
-    if(todos && todos.length>0){
+    if(todos && todos.length>0){ // todos.lenght >=0 this condition is deleting the data from local storage please check;
       setTodos(todos);
     }
   },[]);
 
   useEffect(()=>{
-      localStorage.setItem("todos",JSON.stringify(todos));
+      localStorage.setItem("todos",JSON.stringify(todos));// async and await don't work in useEffect why?
   },[todos]);
 
   return (
