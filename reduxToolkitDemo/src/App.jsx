@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import AddTodo from './components/AddTodo'
+import Todos from './components/Todos'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-     <h1>Learn Redux Tool-Kit</h1>
+    <h1 className='text-3xl text-white bg-gray-700 p-4'>React-Redux Demo App</h1>
+     <AddTodo/>
+     <Todos/>
     </>
   )
 }
